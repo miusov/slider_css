@@ -1,0 +1,95 @@
+.slider ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 500%;
+	position: relative;
+	left: 0;
+	transition: all .5s;
+}
+.slider ul li{
+	float: left;
+	width: 20%;
+}
+.slider img{
+	width: 100%;
+}
+.slider{
+	width: 70%;
+	background: #600000;
+	position: relative;
+}
+.wrap{
+	overflow: hidden;
+}
+.slider input[type="radio"]+label{
+display: block;
+width: 10px;
+height: 10px;
+background: #600000;
+border: 2px #fff solid;
+border-radius: 50%;
+position: absolute;
+bottom: 10px;
+left: 50%;
+z-index: 10;
+
+}
+.slider input[type="radio"]:checked+label{
+	background: #fff;
+}
+#r1+label{
+	margin-left: -40px;
+}
+#r2+label{
+	margin-left: -20px;
+}
+#r4+label{
+	margin-left: 20px;
+}
+#r5+label{
+	margin-left: 40px;
+}
+.slider input[type="radio"]{
+	display: none;
+}
+#r1:checked~.wrap ul{
+	left: 0;
+}
+#r2:checked~.wrap ul{
+	left: -100%;
+}
+#r3:checked~.wrap ul{
+	left: -200%;
+}
+#r4:checked~.wrap ul{
+	left: -300%;
+}
+#r5:checked~.wrap ul{
+	left: -400%;
+}
+.arrow{
+	display: none;
+	width: 28px;
+	height: 37px;
+	background: url(images/arrows.png);
+	position: absolute;
+	top: 50%;
+	margin-top: -18px;
+	z-index: 10;
+}
+#r1:checked~.arrow[for="r2"],
+#r2:checked~.arrow[for="r3"],
+#r3:checked~.arrow[for="r4"],
+#r4:checked~.arrow[for="r5"]{
+	display: block;
+	right: 5px;
+	background-position: 100% 0;
+}
+#r2:checked~.arrow[for="r1"],
+#r3:checked~.arrow[for="r2"],
+#r4:checked~.arrow[for="r3"],
+#r5:checked~.arrow[for="r4"]{
+	display: block;
+	left: 5px;
+}
